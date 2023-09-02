@@ -24,6 +24,9 @@ set autoindent
 " Do smart autoindenting when starting a new line
 set smartindent
 
+set nu
+set rnu
+
 
 " Setup colorscheme
 set background=light " or dark if you want dark mode
@@ -169,8 +172,8 @@ let g:sneak#label = 1
 " :Start <cmd>
 "
 " Custom commands to bind Dispatch and Focus
-nnoremap <leader>cp <cmd>Dispatch<cr>
-nnoremap <leader>c<Space> :Focus<Space>
+nnoremap <leader>pc <cmd>Dispatch<cr>
+nnoremap <leader>p<Space> :Focus<Space>
 
 " ------------ vim-bazel -----------------
 " Docs:
@@ -202,4 +205,11 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+" ----------- Spell Checker ----------
+"  Docs:
+"  This enables the default spellchecker in neovim
+set spelllang=en_us
+set spell
+
 
